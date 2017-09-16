@@ -7,7 +7,7 @@ public class dragonActions : MonoBehaviour
 
     private Animator animator;
     public Rigidbody2D dragonRigidbody;
-    public int dragonAction = 0;
+    public int dragonAction = 0;    //  0 = idle, 1 = attack, 2 = death, 3 = flight
 
     // Use this for initialization
     void Start()
@@ -32,6 +32,14 @@ public class dragonActions : MonoBehaviour
 
             case 2:
                 dragonAnimation = 2;
+                break;
+
+            case 3:
+                dragonAnimation = 3;
+                break;
+
+            case 4:
+                dragonAnimation = 4;
                 break;
 
             default: dragonAnimation = 0;

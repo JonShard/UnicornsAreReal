@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragonRigidbody: {fileID: 50788786780320276}
-  dragonAction: 2
+  dragonAction: 3
 --- !u!212 &212331902587196924
 SpriteRenderer:
   m_ObjectHideFlags: 1
