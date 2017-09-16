@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerBools : MonoBehaviour
+public class playerVariables : MonoBehaviour
 {
     public enum inventoryCheck{axe,sword,antidote,emptyVial,waterBucket,emptyBucket}; //enum that keeps track of "where things is in the inventory"
     //public variables to check actions that can/will be performed

@@ -1,4 +1,8 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 4a8d0212d378b914e94bd9961f7cff40
+folderAsset: yes
+=======
 <<<<<<< HEAD:Graphic Novel/Assets/Scripts.meta
 guid: 66ca0e5af2294ac4d8634417b9b1bb0f
 folderAsset: yes
@@ -10,6 +14,7 @@ folderAsset: yes
 timeCreated: 1501093671
 licenseType: Pro
 >>>>>>> 9a0f14523d6c250befddc8a2c4d2aa2334da8b31:Graphic Novel/Assets/Kenney Assets/Castle Kit/Models/Materials.meta
+>>>>>>> 72cfbe5d6d05936b8a08f804f2178984164cd561
 DefaultImporter:
   userData: 
   assetBundleName: 
