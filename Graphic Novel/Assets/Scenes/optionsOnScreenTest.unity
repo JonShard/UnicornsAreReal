@@ -131,7 +131,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 193691666}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.84, y: 0.1, z: 0}
+  m_LocalPosition: {x: 0.83, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -145,9 +145,9 @@ GUIText:
   m_GameObject: {fileID: 193691666}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Pick it up
+  m_Text: bR
   m_Anchor: 4
-  m_Alignment: 1
+  m_Alignment: 2
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 0
   m_TabSize: 4
@@ -261,10 +261,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc849a53a1077f4b8695a39646fbbc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  botRight: {fileID: 193691666}
-  botLeft: {fileID: 1860976067}
-  topRight: {fileID: 1154654869}
-  topLeft: {fileID: 1190366346}
 --- !u!1 &1154654869
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,9 +285,9 @@ GUIText:
   m_GameObject: {fileID: 1154654869}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Run away
+  m_Text: tR
   m_Anchor: 4
-  m_Alignment: 1
+  m_Alignment: 2
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 0
   m_TabSize: 4
@@ -341,9 +337,9 @@ GUIText:
   m_GameObject: {fileID: 1190366346}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Eat it
+  m_Text: tL
   m_Anchor: 4
-  m_Alignment: 1
+  m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 0
   m_TabSize: 4
@@ -369,6 +365,110 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1482531119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1482531121}
+  - component: {fileID: 1482531120}
+  m_Layer: 0
+  m_Name: action
+  m_TagString: Question
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!132 &1482531120
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1482531119}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: Player Action
+  m_Anchor: 4
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 0
+  m_TabSize: 4
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 40
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!4 &1482531121
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1482531119}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 0.43, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1626308153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1626308155}
+  - component: {fileID: 1626308154}
+  m_Layer: 0
+  m_Name: question
+  m_TagString: Question
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!132 &1626308154
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1626308153}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: Story Action Here
+  m_Anchor: 4
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 0
+  m_TabSize: 4
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 40
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!4 &1626308155
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1626308153}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 0.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1860976067
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,9 +493,9 @@ GUIText:
   m_GameObject: {fileID: 1860976067}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Leave it alone
+  m_Text: bL
   m_Anchor: 4
-  m_Alignment: 1
+  m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 0
   m_TabSize: 4
@@ -415,7 +515,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1860976067}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.25, y: 0.1, z: 0}
+  m_LocalPosition: {x: 0.17, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
