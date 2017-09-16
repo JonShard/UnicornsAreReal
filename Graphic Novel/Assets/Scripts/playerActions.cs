@@ -7,7 +7,7 @@ public class playerActions : MonoBehaviour
 {
 
     public Vector2 desiredPosition = new Vector2(0, 0);             //The global position the player will move to. 
-    public float movementSpeed = 20.0f;                             //How fast the player moves to the disired location.
+    public float movementSpeed = 3.0f;                             //How fast the player moves to the disired location.
     private int movingInDirection = 0;                              //0 = still,  1 = right,  2 = left,  3 = up,  4 = down
 
     private Animator animator;
@@ -18,6 +18,7 @@ public class playerActions : MonoBehaviour
     int leftHash = Animator.StringToHash("movementLeft");
     int upHash = Animator.StringToHash("movementUpward");
     int downHash = Animator.StringToHash("movementForward");
+    int idle = Animator.StringToHash("defaultState");
 
     // Use this for initialization
     void Start()
@@ -40,29 +41,34 @@ public class playerActions : MonoBehaviour
             if (angle > 180 - 45 && angle < 180 + 45)
             {
                 movingInDirection = 1;          //right
-                animator.SetTrigger(rightHash);
+                //animator.SetTrigger(movingInDirection);
+                //animator.SetInteger("direction", movingInDirection);
             }
             else if (angle > 0 - 45 && angle < 0 + 45)
             {
                 movingInDirection = 2;     //left
-                animator.SetTrigger(leftHash);
+               // animator.SetTrigger(leftHash);
             }
             else if (angle > 270 - 45 && angle < 270 + 45)
             {
                 movingInDirection = 3;      //up
-                animator.SetTrigger(upHash);
+               // animator.SetTrigger(upHash);
             }
             else if (angle > 90 - 45 && angle < 90 + 45)
             {
                 movingInDirection = 4;      //down
-                animator.SetTrigger(downHash);
+                //animator.SetTrigger(downHash);
             }
+            animator.SetInteger("direction", movingInDirection);
         }
         else
         {
-            movingInDirection = 0;                                  //Standing still now. 
+            movingInDirection = 0;
+            animator.SetInteger("direction", movingInDirection);
             playerRigidbody.velocity = Vector2.zero;
         }
+        //animator.SetInteger("direction", movingInDirection);
+        Debug.Log("Direction = " + movingInDirection);
     }
 
 
