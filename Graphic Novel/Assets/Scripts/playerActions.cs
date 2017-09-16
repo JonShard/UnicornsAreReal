@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class playerActions : MonoBehaviour
 {
-    public Vector2 desiredPosition = new Vector2(0, 0);             //The global position the player will move to. 
-    public float movementSpeed = 3.0f;                              //How fast the player moves to the disired location.
     private int movingInDirection = 0;                              //0 = still,  1 = right,  2 = left,  3 = up,  4 = down
+    public float movementSpeed = 3.0f;                              //How fast the player moves to the disired location.
 
     private Animator animator;
     public Rigidbody2D playerRigidbody;
+    public Vector2 desiredPosition = new Vector2(0, 0);             //The global position the player will move to. 
 
     // Use this for initialization
     void Start()
@@ -58,7 +58,7 @@ public class playerActions : MonoBehaviour
         Debug.Log("Direction = " + movingInDirection);
     }
     
-    void moveToPosition(Vector2 v)
+    public void movePlayerToPosition(Vector2 v)
     {
         desiredPosition = v;                                        //Sets the desired position to be a point on global cordinates. 
     }
