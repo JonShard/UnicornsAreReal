@@ -19,19 +19,25 @@ public class playerActions : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
     {
-		
-        
-        
-	}
+        //Constantly move player to the desired position with movement speed.
+        Vector2 vectorToDesiredPoint = desiredPosition - new Vector2(transform.position.x, transform.position.y);
+        if (vectorToDesiredPoint.magnitude > 0.01f)
+        {
+            playerRigidbody.velocity = vectorToDesiredPoint;
+            playerRigidbody.velocity = playerRigidbody.velocity.normalized * movementSpeed;
+        }
+        else
+        {
+            playerRigidbody.velocity = Vector2.zero;
+        }
+    }
 
 
     void moveToPosition(Vector2 v)
     {
-        
-        playerRigidbody.velocity = transform.position - 
-
+        desiredPosition = v;                                        //Sets the desired position to be a point on global cordinates. 
     }
 
 
