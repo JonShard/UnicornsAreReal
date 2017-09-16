@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50788786780320276}
   - component: {fileID: 61628237112973046}
   - component: {fileID: 95027527523786502}
+  - component: {fileID: 114947181489338532}
   m_Layer: 8
   m_Name: Dragon
   m_TagString: Enemy
@@ -97,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 1626222388465484}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b783a245bf2896542b776eddc1295905, type: 2}
+  m_Controller: {fileID: 9100000, guid: 92c780a52b004e64fae712a59948049c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -105,6 +106,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114947181489338532
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1626222388465484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ab76d0566869f44a962820ae1282bce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragonRigidbody: {fileID: 50788786780320276}
+  dragonAction: 3
 --- !u!212 &212331902587196924
 SpriteRenderer:
   m_ObjectHideFlags: 1
