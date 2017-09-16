@@ -10,13 +10,17 @@ public class sceneChanger : MonoBehaviour
     {
 		
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene("A", LoadSceneMode.Single);
+            SceneManager.LoadScene("Start", LoadSceneMode.Single);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        { 
+            SceneManager.LoadScene("A", LoadSceneMode.Single); 
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
