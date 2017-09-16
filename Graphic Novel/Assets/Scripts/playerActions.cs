@@ -32,9 +32,9 @@ public class playerActions : MonoBehaviour
 
             int angle = (int) Helpfunctions.getAngle(vectorToDesiredPoint, new Vector2(0,0)) + 90;
             if (angle > 180-45 && angle < 180+45)   movingInDirection = 1;      //right
-            if (angle > 0-45   && angle < 0+45)     movingInDirection = 2;      //left
-            if (angle > 270-45 && angle < 270+45)  movingInDirection = 3;      //up
-            if (angle > 90-45  && angle < 90+45)   movingInDirection = 4;      //down
+            else if (angle > 0-45   && angle < 0+45)     movingInDirection = 2;      //left
+            else if (angle > 270-45 && angle < 270+45)  movingInDirection = 3;      //up
+            else if (angle > 90-45  && angle < 90+45)   movingInDirection = 4;      //down
 
 
 
