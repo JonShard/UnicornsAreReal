@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Question
+  - textBottomRight
+  - textTopRight
+  - textTopLeft
+  - textBottomLeft
+  - background
   layers:
   - Default
   - TransparentFX
@@ -44,4 +50,13 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 2591437507
+    locked: 0
+  - name: props
+    uniqueID: 2305494505
+    locked: 0
+  - name: player
+    uniqueID: 184487719
     locked: 0
