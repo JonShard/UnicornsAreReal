@@ -7,8 +7,8 @@ public static class OptionsClass
     public static int situation = 1;
 
     static Vector2 spawnPosition = new Vector2(0,0);
-    static Vector2 situationPosition1 = new Vector2(0, 10);
-    static Vector2 situationPosition2 = new Vector2(0, 15);
+    static Vector2 situationPosition1 = new Vector2(0.18f, -8f);
+    static Vector2 situationPosition2 = new Vector2(2.31f, -1.09f);
 
     static Vector2 exitPosition = new Vector2(0, 20);
 
@@ -81,7 +81,7 @@ public static class OptionsClass
                         case 1:     //Pick up rock.
 
 
-                            //Disable rock instance.
+                            GameObject.Find("rock").GetComponent<SpriteRenderer>().enabled = false;
                             inventory.inventory[6] = true;                  // rock in inventory is true.
                             actions.movePlayerToPosition(situationPosition1 + new Vector2(0, 2));
                             return "It's lighter than it seems.";

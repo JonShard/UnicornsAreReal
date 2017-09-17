@@ -11,6 +11,7 @@ TagManager:
   - Question
   - textTopRight
   - textBottomRight
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -53,6 +54,9 @@ TagManager:
     locked: 0
   - name: roads
     uniqueID: 3531503801
+    locked: 0
+  - name: player
+    uniqueID: 1300537067
     locked: 0
   - name: buldings
     uniqueID: 3056181947
