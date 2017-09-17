@@ -37,13 +37,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1626222388465484}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalRotation: {x: -0, y: -0.0033475219, z: -0, w: 0.99999446}
+  m_LocalPosition: {x: -1.5, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -0.384, z: 0}
 --- !u!50 &50788786780320276
 Rigidbody2D:
   serializedVersion: 4
@@ -117,8 +117,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ab76d0566869f44a962820ae1282bce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dragonAction: 0
+  movementSpeed: 5
   dragonRigidbody: {fileID: 50788786780320276}
-  dragonAction: 3
+  desiredPosition: {x: -4, y: 2}
 --- !u!212 &212331902587196924
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -148,8 +150,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 244899923
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300096, guid: 859f17e014a1b1b47b6b551ebb0a4b55, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
