@@ -3,14 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Enemy
-  - Question
-  - textBottomRight
-  - textTopRight
-  - textTopLeft
-  - textBottomLeft
-  - background
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -20,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - obstacles
+  - 
   - 
   - 
   - 
@@ -45,18 +38,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: obstacles
-    uniqueID: 3143882295
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: background
-    uniqueID: 2591437507
+  - name: foliage
+    uniqueID: 2096809793
     locked: 0
-  - name: props
-    uniqueID: 2305494505
+  - name: roads
+    uniqueID: 4116037369
     locked: 0
-  - name: player
-    uniqueID: 184487719
+  - name: water
+    uniqueID: 1930852509
+    locked: 0
+  - name: bulding
+    uniqueID: 1380156839
+    locked: 0
+  - name: creature
+    uniqueID: 3988171753
     locked: 0
