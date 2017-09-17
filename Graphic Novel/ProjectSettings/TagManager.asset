@@ -42,6 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: foliage
+    uniqueID: 136085093
+    locked: 0
   - name: road
     uniqueID: 3143882295
     locked: 0
