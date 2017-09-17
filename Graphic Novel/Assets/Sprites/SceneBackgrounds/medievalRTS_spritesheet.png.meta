@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e5cb106e951139544a4a8cf21bffc2b9
-timeCreated: 1505558857
+timeCreated: 1505640504
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -501,10 +501,10 @@ TextureImporter:
       name: medievalRTS_spritesheet_23
       rect:
         serializedVersion: 2
-        x: 432
-        y: 362
-        width: 43
-        height: 45
+        x: 431
+        y: 364
+        width: 44
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1006,7 +1006,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 37
+        y: 38
         width: 64
         height: 64
       alignment: 0
@@ -1047,10 +1047,10 @@ TextureImporter:
       name: medievalRTS_spritesheet_63
       rect:
         serializedVersion: 2
-        x: 495
+        x: 498
         y: 36
-        width: 31
-        height: 65
+        width: 26
+        height: 64
       alignment: 9
       pivot: {x: 0.6284561, y: 0.44290853}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1526,7 +1526,7 @@ TextureImporter:
         x: 192
         y: 0
         width: 60
-        height: 38
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
