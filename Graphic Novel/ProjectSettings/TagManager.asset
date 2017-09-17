@@ -39,9 +39,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: obstacles
-    uniqueID: 3143882295
-    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: road
+    uniqueID: 3143882295
+    locked: 0
+  - name: water
+    uniqueID: 1220445481
+    locked: 0
+  - name: building
+    uniqueID: 1111683037
+    locked: 0
+  - name: creature
+    uniqueID: 1391236037
     locked: 0
