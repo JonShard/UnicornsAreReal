@@ -54,8 +54,9 @@ public class playerActions : MonoBehaviour
             movingInDirection = 0;
             animator.SetInteger("direction", movingInDirection);
             playerRigidbody.velocity = Vector2.zero;
+
+            OptionsClass.getChoices();
         }
-        Debug.Log("Direction = " + movingInDirection);
     }
     
     public void movePlayerToPosition(Vector2 v)

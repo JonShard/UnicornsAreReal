@@ -5,6 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - textBottomLeft
+  - background
+  - textTopRight
+  - textBottomRight
+  - textTopLeft
+  - Question
+  - options
   layers:
   - Default
   - TransparentFX
@@ -41,4 +48,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Menu
+    uniqueID: 1667996053
+    locked: 0
+  - name: Player
+    uniqueID: 194405433
     locked: 0
