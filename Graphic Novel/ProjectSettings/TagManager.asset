@@ -41,21 +41,3 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-<<<<<<< HEAD
-=======
-  - name: foliage
-    uniqueID: 2096809793
-    locked: 0
-  - name: roads
-    uniqueID: 4116037369
-    locked: 0
-  - name: water
-    uniqueID: 1930852509
-    locked: 0
-  - name: bulding
-    uniqueID: 1380156839
-    locked: 0
-  - name: creature
-    uniqueID: 3988171753
-    locked: 0
->>>>>>> 2e36069099abab6d03075a9ddec0caa8f585b141

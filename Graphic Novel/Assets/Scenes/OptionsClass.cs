@@ -6,8 +6,6 @@ public static class OptionsClass
 {
     public static int situation = 1;
 
-    private static bool rockPickedUp = false;
-
     static Vector2 spawnPosition = new Vector2(0,0);
     static Vector2 situationPosition1 = new Vector2(0, 10);
     static Vector2 exitPosition = new Vector2(0, 20);
@@ -34,7 +32,16 @@ public static class OptionsClass
 
 
             case 2:         //Rock on ground
-                perOgPaal.activateQuestionScreen("You notice a rock on the ground.", "Pick it up!", "Leave it to suffer.", "Throw it into the air!", "Talk to the rock");
+                if (inventory.inventory[6] == false)
+                {
+                    perOgPaal.activateQuestionScreen("You notice a rock on the ground.", "Pick it up!",
+                                            "Leave it to suffer.", "Throw it into the air!", "Talk to the rock");
+                }
+                else
+                {
+                    perOgPaal.activateQuestionScreen("You are now carrying the rock.", "Pick it up!",
+                                            "Leave it to suffer.", "Throw it into the air!", "Talk to the rock");
+                }
                 break;
 
 
@@ -66,9 +73,17 @@ public static class OptionsClass
                 {
                     case 1:     //Pick up rock.
 
-                        //Disable rock instance.
-                        inventory.inventory[6] = true;                  // rock in inventory is true.
-                        return "It's lighter than it seems.";
+                        if (inventory.inventory[6] == false)
+                        {
+                            //Disable rock instance.
+                            inventory.inventory[6] = true;                  // rock in inventory is true.
+                            actions.movePlayerToPosition(situationPosition1 + new Vector2(0, 2));
+                            return "It's lighter than it seems.";
+                        }
+                        else
+                        {
+
+                        }
                         break;
 
                     case 2:     //Leave rock.
@@ -84,7 +99,6 @@ public static class OptionsClass
                         break;
                 }
 
-                situation++;
                 break;
 
 
