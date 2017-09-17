@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class optionDisplay : MonoBehaviour
+public  class optionDisplay : MonoBehaviour
 {
     //Declarations
     GameObject botRight;
@@ -13,9 +13,13 @@ public class optionDisplay : MonoBehaviour
     GameObject action;
     GameObject optionBackground;
 
+
+    public int timeout = 5;
+
     // Use this for initialization
     void Start()
     {
+
         //defenitions
         topLeft = GameObject.Find("topLeft");
         topRight = GameObject.Find("topRight");
@@ -26,74 +30,59 @@ public class optionDisplay : MonoBehaviour
         optionBackground = GameObject.Find("optionBackground");
 
 
+        deactivateQuestionScreen();
     }
 
-    void topRightWinner() //Invoke functions that run based on what option wins the vote
-    {
-        topRight.GetComponent<GUIText>().enabled = false;
-        question.GetComponent<GUIText>().enabled = false;
-        action.GetComponent<GUIText>().enabled = false;
-        optionBackground.GetComponent<SpriteRenderer>().enabled = false;
-    }
-    void topLeftWinner()
-    {
-        topLeft.GetComponent<GUIText>().enabled = false;
-        question.GetComponent<GUIText>().enabled = false;
-        action.GetComponent<GUIText>().enabled = false;
-        optionBackground.GetComponent<SpriteRenderer>().enabled = false;
 
-    }
-    void botRightWinner()
-    {
-        botRight.GetComponent<GUIText>().enabled = false;
-        question.GetComponent<GUIText>().enabled = false;
-        action.GetComponent<GUIText>().enabled = false;
-        optionBackground.GetComponent<SpriteRenderer>().enabled = false;
-
-    }
-    void botLeftWinner()
-    {
-        botLeft.GetComponent<GUIText>().enabled = false;
-        question.GetComponent<GUIText>().enabled = false;
-        action.GetComponent<GUIText>().enabled = false;
-        optionBackground.GetComponent<SpriteRenderer>().enabled = false;
-
-    }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha5))    //GetKeyDown functions that runs one of the above invoke functions and turns the three other sprite renderers off 
+        int choice = 0;
+
+        if (Input.GetKeyDown(KeyCode.Alpha5) && topLeft.GetComponent<GUIText>().text != "")    //GetKeyDown functions that runs one of the above invoke functions and turns the three other sprite renderers off 
         {
 
-            Invoke("topLeftWinner", 3);
+            Invoke("deactivateQuestionScreen", timeout);
             botRight.GetComponent<GUIText>().enabled = false;
             botLeft.GetComponent<GUIText>().enabled = false;
             topRight.GetComponent<GUIText>().enabled = false;
+            choice = 1;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha6))
+        if (Input.GetKeyDown(KeyCode.Alpha6) && topRight.GetComponent<GUIText>().text != "")
         {
 
-            Invoke("topRightWinner", 3);
+            Invoke("deactivateQuestionScreen", timeout);
             botRight.GetComponent<GUIText>().enabled = false;
             botLeft.GetComponent<GUIText>().enabled = false;
             topLeft.GetComponent<GUIText>().enabled = false;
+            choice = 2;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha7))
+        if (Input.GetKeyDown(KeyCode.Alpha7) && botRight.GetComponent<GUIText>().text != "")
         {
 
-            Invoke("botRightWinner", 3);
+            Invoke("deactivateQuestionScreen", timeout);
             topLeft.GetComponent<GUIText>().enabled = false;
             botLeft.GetComponent<GUIText>().enabled = false;
             topRight.GetComponent<GUIText>().enabled = false;
+            choice = 3;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha8))
+        if (Input.GetKeyDown(KeyCode.Alpha8) && botLeft.GetComponent<GUIText>().text != "")
         {
 
-            Invoke("botLeftWinner", 3);
+            Invoke("deactivateQuestionScreen", timeout);
             botRight.GetComponent<GUIText>().enabled = false;
             topLeft.GetComponent<GUIText>().enabled = false;
             topRight.GetComponent<GUIText>().enabled = false;
+            choice = 4;
         }
+        if (choice != 0)
+        {
+            question.GetComponent<GUIText>().enabled = false;
+            action.GetComponent<GUIText>().text = OptionsClass.performActions(choice);
+        }
+
+
+
         if (Input.GetKeyDown(KeyCode.Space))            //test func that makes all GUI texts appear on screen
         {
             botRight.GetComponent<GUIText>().enabled = true;
@@ -107,15 +96,12 @@ public class optionDisplay : MonoBehaviour
         }
 
 
+
     }
 
-    void activateQuestionScreen(string questionText, string topLeftText, string topRightText = "", string botLeftText = "", string botrightText = "") //function that recieves five strings and displays them all on screen along with the background
+    public void activateQuestionScreen(string questionText, string topLeftText, string topRightText = "", string botLeftText = "", string botrightText = "") //function that recieves five strings and displays them all on screen along with the background
     {
-        question.GetComponent<GUIText>().text = questionText;
-        botRight.GetComponent<GUIText>().text = botrightText;
-        botLeft.GetComponent<GUIText>().text = botLeftText;
-        topRight.GetComponent<GUIText>().text = topRightText;
-        topLeft.GetComponent<GUIText>().text = topLeftText;
+
         botRight.GetComponent<GUIText>().enabled = true;
         botLeft.GetComponent<GUIText>().enabled = true;
         topLeft.GetComponent<GUIText>().enabled = true;
@@ -123,5 +109,26 @@ public class optionDisplay : MonoBehaviour
         question.GetComponent<GUIText>().enabled = true;
         action.GetComponent<GUIText>().enabled = true;
         optionBackground.GetComponent<SpriteRenderer>().enabled = true;
+
+        question.GetComponent<GUIText>().text = questionText;
+        botRight.GetComponent<GUIText>().text = botrightText;
+        botLeft.GetComponent<GUIText>().text = botLeftText;
+        topRight.GetComponent<GUIText>().text = topRightText;
+        topLeft.GetComponent<GUIText>().text = topLeftText;
+
+
+    }
+
+    public void deactivateQuestionScreen()
+    {
+        action.GetComponent<GUIText>().text = "What do you do?";
+        question.GetComponent<GUIText>().enabled = false;
+        action.GetComponent<GUIText>().enabled = false;
+        botRight.GetComponent<GUIText>().enabled = false;
+        botLeft.GetComponent<GUIText>().enabled = false;
+        topLeft.GetComponent<GUIText>().enabled = false;
+        topRight.GetComponent<GUIText>().enabled = false;
+        optionBackground.GetComponent<SpriteRenderer>().enabled = false;
+
     }
 }

@@ -38,11 +38,11 @@ GameObject:
   - component: {fileID: 114612066330864412}
   m_Layer: 0
   m_Name: optionsMenu
-  m_TagString: Untagged
+  m_TagString: options
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1412394113787546
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +361,7 @@ GUIText:
   m_GameObject: {fileID: 1412394113787546}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Player Action
+  m_Text: What do you do?
   m_Anchor: 4
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
