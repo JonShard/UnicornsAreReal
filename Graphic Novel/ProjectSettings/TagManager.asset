@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Enemy
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -14,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - obstacles
+  - 
   - 
   - 
   - 
@@ -43,17 +42,17 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: foliage
-    uniqueID: 136085093
+    uniqueID: 2096809793
     locked: 0
-  - name: road
-    uniqueID: 3143882295
+  - name: roads
+    uniqueID: 4116037369
     locked: 0
   - name: water
-    uniqueID: 1220445481
+    uniqueID: 1930852509
     locked: 0
-  - name: building
-    uniqueID: 1111683037
+  - name: bulding
+    uniqueID: 1380156839
     locked: 0
   - name: creature
-    uniqueID: 1391236037
+    uniqueID: 3988171753
     locked: 0
