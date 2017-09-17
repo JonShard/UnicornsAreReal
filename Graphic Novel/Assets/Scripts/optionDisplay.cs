@@ -39,7 +39,7 @@ public  class optionDisplay : MonoBehaviour
     {
         int choice = 0;
 
-        if (Input.GetKeyDown(KeyCode.Alpha5) && topLeft.GetComponent<GUIText>().text != "")    //GetKeyDown functions that runs one of the above invoke functions and turns the three other sprite renderers off 
+        if (Input.GetKeyDown(KeyCode.Alpha5) && topLeft.GetComponent<GUIText>().text != "")    //GetKeyDown functions that runs one of the invoke functions and turns the three other sprite renderers off 
         {
 
             Invoke("deactivateQuestionScreen", timeout);

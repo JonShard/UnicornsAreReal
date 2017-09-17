@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - options
+  - textBottomLeft
+  - background
+  - textTopLeft
+  - Question
+  - textTopRight
+  - textBottomRight
   layers:
   - Default
   - TransparentFX
@@ -40,4 +47,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: foilage
+    uniqueID: 1434475297
+    locked: 0
+  - name: roads
+    uniqueID: 3531503801
+    locked: 0
+  - name: buldings
+    uniqueID: 3056181947
+    locked: 0
+  - name: water
+    uniqueID: 2790050267
+    locked: 0
+  - name: creature
+    uniqueID: 244899923
     locked: 0
