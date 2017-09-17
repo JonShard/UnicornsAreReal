@@ -17,7 +17,7 @@ public class dragonActions : MonoBehaviour
         animator = GetComponent<Animator>();
     }
     
-    void Update()
+    void FixedUpdateUpdate()
     {
         //move dragon to the desired position with movement speed.
         Vector2 vectorToDesiredPoint = desiredPosition - new Vector2(transform.position.x, transform.position.y);
