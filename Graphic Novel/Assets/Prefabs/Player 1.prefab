@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 50558481733241644}
   - component: {fileID: 114647195296428214}
   - component: {fileID: 61493880505352350}
+  - component: {fileID: 114663652693543986}
   m_Layer: 8
   m_Name: Player 1
   m_TagString: Player
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1351029696521620}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.39, y: -4.03, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -117,9 +118,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4913aa74af69f264dbaf838fddd12cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3
+  movementSpeed: 1.8
   playerRigidbody: {fileID: 50558481733241644}
-  desiredPosition: {x: 5, y: 0}
+  desiredPosition: {x: 0, y: 2}
+--- !u!114 &114663652693543986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1351029696521620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc640a5966f72e468e0c771e6289a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldAmount: 0
+  weaponEquipped: 0
+  inventory: 0000000000000000000000000000000000000000
+  isPoisoned: 0
+  onFire: 0
+  armourEquipped: 0
 --- !u!212 &212719993343006578
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -150,7 +168,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 194405433
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300036, guid: a98aa45873c6186418a42062dea2e26d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

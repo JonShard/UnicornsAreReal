@@ -6,7 +6,7 @@ using UnityEngine;
 public class playerActions : MonoBehaviour
 {
     private int movingInDirection = 0;                              //0 = still,  1 = right,  2 = left,  3 = up,  4 = down
-    public float movementSpeed = 3.0f;                              //How fast the player moves to the disired location.
+    public float movementSpeed = 1.8f;                              //How fast the player moves to the disired location.
 
     private Animator animator;
     public Rigidbody2D playerRigidbody;

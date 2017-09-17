@@ -14,7 +14,7 @@ public  class optionDisplay : MonoBehaviour
     GameObject optionBackground;
 
 
-    public int timeout = 5;
+    public int timeout = 3;
 
     // Use this for initialization
     void Start()
@@ -57,7 +57,7 @@ public  class optionDisplay : MonoBehaviour
             topLeft.GetComponent<GUIText>().enabled = false;
             choice = 2;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha7) && botRight.GetComponent<GUIText>().text != "")
+        if (Input.GetKeyDown(KeyCode.Alpha7) && botLeft.GetComponent<GUIText>().text != "")
         {
 
             Invoke("deactivateQuestionScreen", timeout);
@@ -66,7 +66,7 @@ public  class optionDisplay : MonoBehaviour
             topRight.GetComponent<GUIText>().enabled = false;
             choice = 3;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha8) && botLeft.GetComponent<GUIText>().text != "")
+        if (Input.GetKeyDown(KeyCode.Alpha8) && botRight.GetComponent<GUIText>().text != "")
         {
 
             Invoke("deactivateQuestionScreen", timeout);

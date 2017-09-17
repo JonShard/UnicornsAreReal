@@ -8,12 +8,16 @@ public static class OptionsClass
 
     static Vector2 spawnPosition = new Vector2(0,0);
     static Vector2 situationPosition1 = new Vector2(0, 10);
+    static Vector2 situationPosition2 = new Vector2(0, 15);
+
     static Vector2 exitPosition = new Vector2(0, 20);
 
     static GameObject optionsMenuObject = GameObject.FindGameObjectWithTag("options");
+    static GameObject gameOverScreenObject = GameObject.Find("GameOverScreen");
     static GameObject player = GameObject.Find("player");
 
     static optionDisplay perOgPaal = optionsMenuObject.GetComponent<optionDisplay>();
+    static GameOverScreen gameOverScreen = gameOverScreenObject.GetComponent<GameOverScreen>();
     static playerActions actions = player.GetComponent<playerActions>();
     static playerVariables inventory = player.GetComponent<playerVariables>();
 
@@ -35,12 +39,12 @@ public static class OptionsClass
                 if (inventory.inventory[6] == false)
                 {
                     perOgPaal.activateQuestionScreen("You notice a rock on the ground.", "Pick it up!",
-                                            "Leave it to suffer.", "Throw it into the air!", "Talk to the rock");
+                                            "Leave it to suffer.");
                 }
                 else
                 {
-                    perOgPaal.activateQuestionScreen("You are now carrying the rock.", "Pick it up!",
-                                            "Leave it to suffer.", "Throw it into the air!", "Talk to the rock");
+                    perOgPaal.activateQuestionScreen("You are now carrying the rock.",
+                                             "Throw it into the air!", "Talk to the rock", "Continue moving!");
                 }
                 break;
 
@@ -69,34 +73,53 @@ public static class OptionsClass
 
 
             case 2:
-                switch (action)
-                {
-                    case 1:     //Pick up rock.
 
-                        if (inventory.inventory[6] == false)
-                        {
+                if (inventory.inventory[6] == false)            //If dont have rock.
+                {
+                    switch (action)
+                    {
+                        case 1:     //Pick up rock.
+
+
                             //Disable rock instance.
                             inventory.inventory[6] = true;                  // rock in inventory is true.
                             actions.movePlayerToPosition(situationPosition1 + new Vector2(0, 2));
                             return "It's lighter than it seems.";
-                        }
-                        else
-                        {
+                            
+                            
+                            break;
 
-                        }
-                        break;
+                        case 2:     //Leave rock.
+                            actions.movePlayerToPosition(situationPosition2);
+                            situation++;
+                            return "As you pass the rock, you can smell what it's cooking.";
+                            break;
 
-                    case 2:     //Leave rock.
+                    }
+                }
+                else                //If already have the rock
+                {
+                    switch (action)
+                    {
+                        case 1:     //Throw rock.
+                            gameOverScreen.activateGameOverScreen("The rock hit you in the head. Funny how gravity works!");
+                            perOgPaal.deactivateQuestionScreen();
+                            return "";
+                            break;
 
-                        break;
+                        case 2:     //Talk to rock.
+                            actions.movePlayerToPosition(situationPosition1 + new Vector2(0, 2));
+                            return "You feel very poetic talking to a rock, however questioning your sanity";
+                            break;
 
-                    case 3:     //Trow rock.
+                        case 3:     //TContine
 
-                        break;
+                            actions.movePlayerToPosition(situationPosition2);
+                            situation++;
+                            return "You carry your trusty rock under your arm as you continue you jouney.";
+                            break;
 
-                    case 4:     //Talk to rock.
-
-                        break;
+                    }
                 }
 
                 break;
